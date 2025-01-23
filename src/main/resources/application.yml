@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  application.name: payment_service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_service
+    username: your_username
+    password: your_password
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  secret:
+    key: secret-key
