@@ -4,14 +4,12 @@ import com.dkds.payment_processor.payment_service.entities.Payment;
 import com.dkds.payment_processor.payment_service.services.MessagePublisher;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 public class RabbitMQPublisher implements MessagePublisher {
 
+    private static final String EXCHANGE_NAME = "payment.exchange";
     @Autowired
     private RabbitTemplate rabbitTemplate;
-
-    private static final String EXCHANGE_NAME = "payment.exchange";
 
     @Override
     public void publishPaymentStatus(Payment payment) {

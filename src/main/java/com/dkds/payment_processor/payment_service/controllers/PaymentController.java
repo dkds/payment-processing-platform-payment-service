@@ -4,12 +4,11 @@ import com.dkds.payment_processor.payment_service.dto.PaymentRequest;
 import com.dkds.payment_processor.payment_service.entities.Payment;
 import com.dkds.payment_processor.payment_service.services.PaymentService;
 import jakarta.validation.Valid;
-import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/payments")
 public class PaymentController {
